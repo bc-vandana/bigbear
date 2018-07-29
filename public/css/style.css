@@ -151,7 +151,7 @@ body { padding-top:30px;}
     }
     100%{
         -webkit-transform: rotate(126deg);
-        transform: rotate(126deg);
+        transform: rotate(200deg);
     }
 }
 @media only screen and (max-width: 990px){
