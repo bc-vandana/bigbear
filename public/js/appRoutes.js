@@ -13,6 +13,11 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 			controller: 'AdminController'
 		})
 
+        .when('/admin_home', {
+            templateUrl: 'views/admin_home.html',
+            controller: 'AdminHomeController'
+        })
+
 		.when('/leader', {
 			templateUrl: 'views/leader.html',
 			controller: 'LeaderController'	

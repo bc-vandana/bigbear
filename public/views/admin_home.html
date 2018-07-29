@@ -1,0 +1,78 @@
+
+	<div class="container addEvent">
+		<div style="height: 200px; width:1070px">
+			<table align="center" width="100%" style="background-color:#7bc1b4ff">
+				<tr>
+					<td rowspan="3" style="padding-left: 100px;width:30%">
+						<image src="../css/bigbearlogo_copy.png" width="150"/>
+					</td>
+				</tr>
+				<tr>
+					<td style="text-align: center"><span style="font-size:4rem; color:white;">Volunteering Needs</span></td>
+				</tr>
+				<tr>
+					<td style="text-align: center"><span style="font-size:3rem; color:white;">at St. Anthony's</span></td>
+				</tr>
+			</table>
+		</div>
+		<span style="color:grey;font-weight: bold">Today</span>
+
+	<div class="card">
+		<div class="card-body ">
+			<a href="admin" style="color:#7bc1b4ff;font-weight: bold">Dinner Room Service</a></br>
+
+			10:30pm | 10 Volunteers
+		</div>
+	</div>
+		</br>
+		<div class="card">
+			<div class="card-body ">
+
+				<a href="admin" style="color:#7bc1b4ff;font-weight: bold">Prep Kitchen</a></br>
+
+				7:30pm | 1 Volunteer
+			</div>
+		</div>
+		</br></br>
+		<span style="color:grey;font-weight: bold">Tomorrow</span>
+		<div class="card">
+			<div class="card-body ">
+
+				<a href="admin" style="color:#7bc1b4ff;font-weight: bold">Mentoring</a></br>
+
+				9:00 am | 2 Volunteers
+			</div>
+		</div>
+	</div>
+
+<script>
+    $(document).ready(function(){
+        $('.hero').hide();
+        $('#addbtn1').click(function() {
+            location.reload();
+        });
+
+
+        $( "#datepicker" ).datepicker();
+        $("img").click(function(){
+            if($(this).css("background-color") == 'rgb(255, 255, 255)'){
+                $(this).css("background-color", "azure");
+            } else {
+                $(this).css("background-color", "white");
+            }
+        });
+
+        $('#addbtn').click(function(){
+            var newitem = $('#add').val();
+            var uniqid = Math.round(new Date().getTime() + (Math.random() * 100));
+            $('#list').append('<li id="'+uniqid+'" class="list-group-item"><input type="button" data-id="'+uniqid+'" class="listelement pull-right" value="X" /> '+newitem+'<input type="hidden" name="listed[]" value="'+newitem+'"></li>');
+            $('#add').val('');
+            return false;
+        });
+        $('#list').delegate(".listelement", "click", function() {
+            var elemid = $(this).attr('data-id');
+            $("#"+elemid).remove();
+        });
+    });
+
+</script>

@@ -1,4 +1,4 @@
-body { padding-top:30px;}
+body { padding-top:30px;font-family: "Avenir Next" !important;}
 
 .dot {
     height: 100px;
@@ -329,6 +329,24 @@ table td {
     table-layout: fixed;
     width: 100%;
     border-spacing: 0 10px;
+}
+
+#example1 {
+    border: 1px solid grey;
+    padding: 10px;
+    box-shadow: 5px 10px;
+}
+
+#example2 {
+    border: 1px solid grey;
+    padding: 10px;
+    box-shadow: 5px 10px #888888;
+}
+
+#example3 {
+    border: 1px solid grey;
+    padding: 10px;
+    box-shadow: 5px 10px red;
 }
 /* END 57 */
 
