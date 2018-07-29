@@ -49,9 +49,9 @@
 	<!-- HEADER -->
 
 
-<ul class="nav nav-pills">
+<ul class="nav nav-pills mb-3">
   <li class="nav-item">
-    <a class="nav-link" href="/">Home</a>
+    <a class="nav-link active" href="/">Home</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="/admin">Admin</a>
@@ -60,11 +60,26 @@
     <a class="nav-link" href="/leader">Leader Board</a>
   </li>
 </ul>
-
-
 	<!-- ANGULAR DYNAMIC CONTENT -->
 	<div ng-view></div>
 
 </div>
+<script>
+$(document).ready(function(){
+	$("a").click(function(){
+		$("a").removeClass("active");
+		if($(this).hasClass("active")){	
+		  
+		} else {
+			$(this).addClass("active");
+		}
+	});
+});
+
+</script>
+
+
+
+
 </body>
 </html>
