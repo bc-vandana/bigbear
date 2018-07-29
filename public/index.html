@@ -40,22 +40,28 @@
 	<script src="js/app.js"></script>
 </head>
 <body ng-app="sampleApp" ng-controller="AdminController">
-<div class="container">
+<div class="container ">
+	<div class="hero">
+	<div class="row">
+        <div class="col-lg-12">
+            <div width="100%" style="background-color:#7bc1b4ff">
+                <image src="../img/leaderboard.png" width="100%"/>
+            </div>
+        </div>
+    </div>
 	
 	<!-- HEADER -->
 
 
-<ul class="nav nav-pills mb-3">
+<ul class="nav nav-pills nav-fill" style="color:white;background-color:rgb(134,192,179)">
   <li class="nav-item">
-    <a class="nav-link active" href="/">Home</a>
+    <a class="nav-link" style="color:white;background-color:rgb(53, 96, 88)" href="/">My Badges</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="/admin">Admin</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="/leader">Leader Board</a>
+    <a class="nav-link" style="color:white;" href="/leader">Leader Board</a>
   </li>
 </ul>
+</div>
 	<!-- ANGULAR DYNAMIC CONTENT -->
 	<div ng-view></div>
 
@@ -63,11 +69,11 @@
 <script>
 $(document).ready(function(){
 	$("a").click(function(){
-		$("a").removeClass("active");
-		if($(this).hasClass("active")){	
-		  
+		if($(this).css("background-color") == 'rgb(53, 96, 88)'){	
+		  //$(this).css("background-color", "rgb(136, 203, 190)");
 		} else {
-			$(this).addClass("active");
+			$("a").css("background-color","rgb(134,192,179)");
+			$(this).css("background-color", "rgb(53, 96, 88)");
 		}
 	});
 });
